@@ -19,8 +19,7 @@ class Table extends Component {
     //   console.log(ele.price);
     // });
     const slideClearfix = {
-      transform: "translateX(0%)",
-      "z-index": "-1"
+      transform: "translateX(0%)"
     };
     const { bannerName } = this.state;
 
@@ -105,95 +104,6 @@ class Table extends Component {
                 </div>
               </td>
               <div className="slide clearfix" style={slideClearfix}>
-                <td>
-                  <div className="col col1">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col2">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col3">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col4">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col5">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col6">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col7">
-                    <span></span>
-                  </div>
-                </td>
-              </div>
-            </tr>
-            <tr>
-              <td>
-                <div className="date">
-                  <span>12/28(四)</span>
-                </div>
-              </td>
-              <div className="slide clearfix" style={slideClearfix}>
-                <td>
-                  <div className="col col1">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col2">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col3">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col4">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col5">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col6">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col7">
-                    <span></span>
-                  </div>
-                </td>
-              </div>
-            </tr>
-            <tr>
-              <td>
-                <div className="date">
-                  <span>12/29(五)</span>
-                </div>
-              </td>
-
-              <div className="slide clearfix" style={slideClearfix}>
                 {JsonData[0].detail.map((ele, i) => {
                   {
                     /* JsonData[0].detail */
@@ -208,44 +118,51 @@ class Table extends Component {
                   );
                 })}
               </div>
-              {/* <div className="slide clearfix" style={slideClearfix}>
-                <td>
-                  <div className="col col1">
-                    <span>111</span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col2">
-                    <span>112</span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col3">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col4">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col5">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col6">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col7">
-                    <span></span>
-                  </div>
-                </td>
+            </tr>
+            <tr>
+              <td>
+                <div className="date">
+                  <span>12/28(四)</span>
+                </div>
+              </td>
+              <div className="slide clearfix" style={slideClearfix}>
+                {JsonData[1].detail.map((ele, i) => {
+                  {
+                    /* JsonData[0].detail */
+                  }
+                  // {JsonData.detail[0].price.map((ele, i) => {
+                  return (
+                    <td>
+                      <div className={`col col${i + 1}`}>
+                        <span>{ele.price}</span>
+                      </div>
+                    </td>
+                  );
+                })}
               </div>
-       */}
+            </tr>
+            <tr>
+              <td>
+                <div className="date">
+                  <span>12/29(五)</span>
+                </div>
+              </td>
+
+              <div className="slide clearfix" style={slideClearfix}>
+                {JsonData[2].detail.map((ele, i) => {
+                  {
+                    /* JsonData[0].detail */
+                  }
+                  // {JsonData.detail[0].price.map((ele, i) => {
+                  return (
+                    <td>
+                      <div className={`col col${i + 1}`}>
+                        <span>{ele.price}</span>
+                      </div>
+                    </td>
+                  );
+                })}
+              </div>
             </tr>
             <tr>
               <td>
@@ -254,41 +171,19 @@ class Table extends Component {
                 </div>
               </td>
               <div className="slide clearfix" style={slideClearfix}>
-                <td>
-                  <div className="col col1">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col2">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col3">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col4">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col5">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col6">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col7">
-                    <span></span>
-                  </div>
-                </td>
+                {JsonData[3].detail.map((ele, i) => {
+                  {
+                    /* JsonData[0].detail */
+                  }
+                  // {JsonData.detail[0].price.map((ele, i) => {
+                  return (
+                    <td>
+                      <div className={`col col${i + 1}`}>
+                        <span>{ele.price}</span>
+                      </div>
+                    </td>
+                  );
+                })}
               </div>
             </tr>
             <tr>
@@ -298,41 +193,19 @@ class Table extends Component {
                 </div>
               </td>
               <div className="slide clearfix" style={slideClearfix}>
-                <td>
-                  <div className="col col1">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col2">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col3">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col4">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col5">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col6">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col7">
-                    <span></span>
-                  </div>
-                </td>
+                {JsonData[4].detail.map((ele, i) => {
+                  {
+                    /* JsonData[0].detail */
+                  }
+                  // {JsonData.detail[0].price.map((ele, i) => {
+                  return (
+                    <td>
+                      <div className={`col col${i + 1}`}>
+                        <span>{ele.price}</span>
+                      </div>
+                    </td>
+                  );
+                })}
               </div>
             </tr>
             <tr>
@@ -342,41 +215,19 @@ class Table extends Component {
                 </div>
               </td>
               <div className="slide clearfix" style={slideClearfix}>
-                <td>
-                  <div className="col col1">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col2">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col3">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col4">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col5">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col6">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col7">
-                    <span></span>
-                  </div>
-                </td>
+                {JsonData[5].detail.map((ele, i) => {
+                  {
+                    /* JsonData[0].detail */
+                  }
+                  // {JsonData.detail[0].price.map((ele, i) => {
+                  return (
+                    <td>
+                      <div className={`col col${i + 1}`}>
+                        <span>{ele.price}</span>
+                      </div>
+                    </td>
+                  );
+                })}
               </div>
             </tr>
             <tr>
@@ -386,41 +237,19 @@ class Table extends Component {
                 </div>
               </td>
               <div className="slide clearfix" style={slideClearfix}>
-                <td>
-                  <div className="col col1">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col2">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col3">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col4">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col5">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col6">
-                    <span></span>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col7">
-                    <span></span>
-                  </div>
-                </td>
+                {JsonData[6].detail.map((ele, i) => {
+                  {
+                    /* JsonData[0].detail */
+                  }
+                  // {JsonData.detail[0].price.map((ele, i) => {
+                  return (
+                    <td>
+                      <div className={`col col${i + 1}`}>
+                        <span>{ele.price}</span>
+                      </div>
+                    </td>
+                  );
+                })}
               </div>
             </tr>
           </table>
