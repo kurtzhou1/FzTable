@@ -158,17 +158,17 @@ table {
     line-height: 2.5;
     font-weight: bolder;
   }
-  .tb_tkda .slide_btn {
-    cursor: pointer;
-    display: block;
-    padding: 13px 3px;
-    line-height: 1;
-    background: hsla(0, 0%, 67%, 0.5);
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    color: #fff;
-  }
+  // .tb_tkda .slide_btn {
+  //   cursor: pointer;
+  //   display: block;
+  //   padding: 13px 3px;
+  //   line-height: 1;
+  //   background: hsla(0, 0%, 67%, 0.5);
+  //   position: absolute;
+  //   top: 50%;
+  //   z-index: 1;
+  //   color: #fff;
+  // }
 }
 
 .container {
@@ -177,7 +177,6 @@ table {
   margin-left: auto;
   font-size: 14px;
   color: #444;
-  min-width: 100%;
   border: black solid 1px;
   box-sizing: border-box;
   .date2 {
@@ -202,9 +201,11 @@ table {
 }
 
 .container .slide_btn.slide_right {
+  display: block;
   right: 0px;
 }
 .container .slide_btn.slide_left {
+  display: block;
   left: 90px;
 }
 
@@ -226,6 +227,7 @@ table {
 }
 
 .date {
+  position: relative;
   border: #e1e2e4 solid 1px;
   background: #f1f1f1;
   width: 88px;
@@ -258,7 +260,6 @@ tr {
   }
 }
 .table {
-  width: 100%;
   table-layout: fixed;
   font-family: Verdana, Arial, \\5fae\8edf\6b63\9ed1\9ad4, Microsoft JhengHei,
     \\5fae\8edf\96c5\9ed1\9ad4, Microsoft YaHei;
@@ -269,12 +270,21 @@ tr {
 }
 
 .col {
+  position: relative;
   height: 50px;
   border: #e1e2e4 solid 1px;
   text-align: center;
   line-height: 50px;
   width: 29vw;
   overflow: hidden;
+}
+.cheapest {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 30px 30px 0 0;
+  border-color: #fe8b88 transparent transparent transparent;
 }
 
 .col:hover {
@@ -315,20 +325,41 @@ tr {
   cursor: pointer;
 }
 
-.slide .clearfix {
-  transform: translateX(-100%);
-}
-
 @media screen and (min-width: 768px) {
   .container {
     border: #e10500 solid 1px;
     padding-left: 10px;
     padding-right: 10px;
     .col {
-      width: 12.7788vw;
+      width: 13.1111vw;
     }
-    .slide_btn {
+    .slide_btn.slide_left {
+      display: none;
+    }
+    .slide_btn.slide_right {
       display: none;
     }
   }
+}
+
+.slide.clearfix {
+  &.C0 {
+    transform: translateX(0%);
+    transition: all 0.3s;
+  }
+  &.C1 {
+    transform: translateX(-28.6%);
+    transition: all 0.3s;
+  }
+  &.C2 {
+    transform: translateX(-57.1%);
+    transition: all 0.3s;
+  }
+}
+
+.slide_btn.slide_right.R2 {
+  display: none;
+}
+.slide_btn.slide_left.L0 {
+  display: none;
 }

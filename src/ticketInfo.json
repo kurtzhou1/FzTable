@@ -9,32 +9,32 @@
       },
       {
         "backDate": "12/31(日)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/01(一)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/02(二)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/03(三)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": true
       },
       {
         "backDate": "01/04(四)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/05(五)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       }
     ]
@@ -44,37 +44,37 @@
     "detail": [
       {
         "backDate": "12/30(六)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "12/31(日)",
-        "price": 12300,
+        "price": "$12,300起",
         "cheapest": true
       },
       {
         "backDate": "01/01(一)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/02(二)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/03(三)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/04(四)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/05(五)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       }
     ]
@@ -89,32 +89,32 @@
       },
       {
         "backDate": "12/31(日)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/01(一)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/02(二)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/03(三)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/04(四)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/05(五)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       }
     ]
@@ -134,27 +134,27 @@
       },
       {
         "backDate": "01/01(一)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/02(二)",
-        "price": 12300,
+        "price": "$12,300起",
         "cheapest": true
       },
       {
         "backDate": "01/03(三)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/04(四)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/05(五)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       }
     ]
@@ -184,17 +184,17 @@
       },
       {
         "backDate": "01/03(三)",
-        "price": 12300,
+        "price": "$12,300起",
         "cheapest": true
       },
       {
         "backDate": "01/04(四)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/05(五)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       }
     ]
@@ -224,17 +224,17 @@
       },
       {
         "backDate": "01/03(三)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/04(四)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/05(五)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       }
     ]
@@ -269,12 +269,12 @@
       },
       {
         "backDate": "01/04(四)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       },
       {
         "backDate": "01/05(五)",
-        "price": 15568,
+        "price": "$15,568起",
         "cheapest": false
       }
     ]
