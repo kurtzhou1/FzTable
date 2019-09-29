@@ -7,7 +7,9 @@ class Table extends Component {
   state = {
     bannerNameR: "",
     bannerNameL: "L0",
-    column: "C0"
+    column: "C0",
+    click: [false, false, false, false, false, false, false],
+    test: ""
   };
   clickR = () => {
     const { column } = this.state;
@@ -35,6 +37,70 @@ class Table extends Component {
       this.setState({
         bannerNameR: "R1",
         column: "C1"
+      });
+    }
+  };
+
+  clickRow = j => {
+    if (j === 0) {
+      this.setState({
+        click: [true, false, false, false, false, false, false]
+      });
+    } else if (j === 1) {
+      this.setState({
+        click: [false, true, false, false, false, false, false]
+      });
+    } else if (j === 2) {
+      this.setState({
+        click: [false, false, true, false, false, false, false]
+      });
+    } else if (j === 3) {
+      this.setState({
+        click: [false, false, false, true, false, false, false]
+      });
+    } else if (j === 4) {
+      this.setState({
+        click: [false, false, false, false, true, false, false]
+      });
+    } else if (j === 5) {
+      this.setState({
+        click: [false, false, false, false, false, true, false]
+      });
+    } else if (j === 6) {
+      this.setState({
+        click: [false, false, false, false, false, false, true]
+      });
+    }
+  };
+
+  clickColumn = i => {
+    if (i === 0) {
+      this.setState({
+        test: [true, false, false, false, false, false, false]
+      });
+    } else if (i === 1) {
+      this.setState({
+        test: [false, true, false, false, false, false, false]
+      });
+    } else if (i === 2) {
+      this.setState({
+        test: [false, false, true, false, false, false, false]
+      });
+    } else if (i === 3) {
+      this.setState({
+        test: [false, false, false, true, false, false, false]
+      });
+    } else if (i === 4) {
+      this.setState({
+        test: [false, false, false, false, true, false, false]
+      });
+    } else if (i === 5) {
+      this.setState({
+        test: [false, false, false, false, false, true, false]
+      });
+    } else if (i === 6) {
+      this.setState({
+        test: [false, false, false, false, false, false, true]
       });
     }
   };
@@ -93,6 +159,13 @@ class Table extends Component {
                     <td>
                       <div className={`col col${i + 1}`}>
                         <span>{ele.backDate}</span>
+                        <div
+                          className={`${
+                            ele.backDate === "01/01(一)" ? "year" : ""
+                          }`}
+                        >
+                          2018
+                        </div>
                       </div>
                     </td>
                   );
@@ -113,7 +186,15 @@ class Table extends Component {
                   // {JsonData.detail[0].price.map((ele, i) => {
                   return (
                     <td>
-                      <div className={`col col${i + 1}`}>
+                      <div
+                        className={`col col${i + 1} ${
+                          this.state.click[0] ? "open1" : null
+                        } ${this.state.test[i] ? "open2" : null}`}
+                        onClick={() => {
+                          this.clickRow(0);
+                          this.clickColumn(i);
+                        }}
+                      >
                         <div
                           className={`${ele.cheapest ? "cheapest" : ""}`}
                         ></div>
@@ -138,10 +219,21 @@ class Table extends Component {
                   // {JsonData.detail[0].price.map((ele, i) => {
                   return (
                     <td>
-                      <div className={`col col${i + 1}`}>
+                      <div
+                        className={`col col${i + 1} ${
+                          this.state.click[1] ? "open1" : null
+                        } ${this.state.test[i] ? "open2" : null}`}
+                        onClick={() => {
+                          this.clickRow(1);
+                          this.clickColumn(i);
+                        }}
+                      >
                         <div
                           className={`${ele.cheapest ? "cheapest" : ""}`}
                         ></div>
+                        <div
+                          className={`${ele.cheapest ? "cheapestw" : ""}`}
+                        >{`${ele.cheapest ? "最便宜" : ""}`}</div>
                         <span>{ele.price}</span>
                       </div>
                     </td>
@@ -164,7 +256,15 @@ class Table extends Component {
                   // {JsonData.detail[0].price.map((ele, i) => {
                   return (
                     <td>
-                      <div className={`col col${i + 1}`}>
+                      <div
+                        className={`col col${i + 1} ${
+                          this.state.click[2] ? "open1" : null
+                        } ${this.state.test[i] ? "open2" : null}`}
+                        onClick={() => {
+                          this.clickRow(2);
+                          this.clickColumn(i);
+                        }}
+                      >
                         <div
                           className={`${ele.cheapest ? "cheapest" : ""}`}
                         ></div>
@@ -189,10 +289,21 @@ class Table extends Component {
                   // {JsonData.detail[0].price.map((ele, i) => {
                   return (
                     <td>
-                      <div className={`col col${i + 1}`}>
+                      <div
+                        className={`col col${i + 1} ${
+                          this.state.click[3] ? "open1" : null
+                        } ${this.state.test[i] ? "open2" : null}`}
+                        onClick={() => {
+                          this.clickRow(3);
+                          this.clickColumn(i);
+                        }}
+                      >
                         <div
                           className={`${ele.cheapest ? "cheapest" : ""}`}
                         ></div>
+                        <div
+                          className={`${ele.cheapest ? "cheapestw" : ""}`}
+                        >{`${ele.cheapest ? "最便宜" : ""}`}</div>
                         <span>{ele.price}</span>
                       </div>
                     </td>
@@ -214,10 +325,21 @@ class Table extends Component {
                   // {JsonData.detail[0].price.map((ele, i) => {
                   return (
                     <td>
-                      <div className={`col col${i + 1}`}>
+                      <div
+                        className={`col col${i + 1} ${
+                          this.state.click[4] ? "open1" : null
+                        } ${this.state.test[i] ? "open2" : null}`}
+                        onClick={() => {
+                          this.clickRow(4);
+                          this.clickColumn(i);
+                        }}
+                      >
                         <div
                           className={`${ele.cheapest ? "cheapest" : ""}`}
                         ></div>
+                        <div
+                          className={`${ele.cheapest ? "cheapestw" : ""}`}
+                        >{`${ele.cheapest ? "最便宜" : ""}`}</div>
                         <span>{ele.price}</span>
                       </div>
                     </td>
@@ -229,6 +351,7 @@ class Table extends Component {
               <td>
                 <div className="date">
                   <span>01/01(一)</span>
+                  <div className="year">2018</div>
                 </div>
               </td>
               <div className={`slide clearfix ${column}`}>
@@ -239,7 +362,15 @@ class Table extends Component {
                   // {JsonData.detail[0].price.map((ele, i) => {
                   return (
                     <td>
-                      <div className={`col col${i + 1}`}>
+                      <div
+                        className={`col col${i + 1} ${
+                          this.state.click[5] ? "open1" : null
+                        } ${this.state.test[i] ? "open2" : null}`}
+                        onClick={() => {
+                          this.clickRow(5);
+                          this.clickColumn(i);
+                        }}
+                      >
                         <div
                           className={`${ele.cheapest ? "cheapest" : ""}`}
                         ></div>
@@ -264,7 +395,15 @@ class Table extends Component {
                   // {JsonData.detail[0].price.map((ele, i) => {
                   return (
                     <td>
-                      <div className={`col col${i + 1}`}>
+                      <div
+                        className={`col col${i + 1} ${
+                          this.state.click[6] ? "open1" : null
+                        } ${this.state.test[i] ? "open2" : null}`}
+                        onClick={() => {
+                          this.clickRow(6);
+                          this.clickColumn(i);
+                        }}
+                      >
                         <div
                           className={`${ele.cheapest ? "cheapest" : ""}`}
                         ></div>
@@ -283,55 +422,3 @@ class Table extends Component {
 }
 
 export default Table;
-
-{
-  /* <td>
-                  <div className="col col1">
-                    <div className="date2">
-                      <span>12/30(六)</span>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col2">
-                    <div className="date2">
-                      <span>12/31(日)</span>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col3">
-                    <div className="date2">
-                      <span>01/01(一)</span>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col4">
-                    <div className="date2">
-                      <span>01/02(二)</span>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col5">
-                    <div className="date2">
-                      <span>01/03(三)</span>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col6">
-                    <div className="date2">
-                      <span>01/04(四)</span>
-                    </div>
-                  </div>
-                </td>
-                <td>
-                  <div className="col col7">
-                    <div className="date2">
-                      <span>01/05(五)</span>
-                    </div>
-                  </div>
-                </td> */
-}
