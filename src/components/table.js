@@ -102,6 +102,7 @@ class Table extends Component {
       this.setState({
         test: [false, false, false, false, false, false, true]
       });
+      console.log("it's test");
     }
   };
 
