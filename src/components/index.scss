@@ -158,17 +158,6 @@ table {
     line-height: 2.5;
     font-weight: bolder;
   }
-  // .tb_tkda .slide_btn {
-  //   cursor: pointer;
-  //   display: block;
-  //   padding: 13px 3px;
-  //   line-height: 1;
-  //   background: hsla(0, 0%, 67%, 0.5);
-  //   position: absolute;
-  //   top: 50%;
-  //   z-index: 1;
-  //   color: #fff;
-  // }
 }
 
 .container {
@@ -179,16 +168,16 @@ table {
   color: #444;
   border: black solid 1px;
   box-sizing: border-box;
-  .date2 {
-    border: #e1e2e4 solid 1px;
-    background: #eaedf2;
-    text-align: center;
-    height: 50px;
-    line-height: 50px;
-  }
+}
+.date2 {
+  border: #e1e2e4 solid 1px;
+  background: #eaedf2;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
 }
 
-.container .slide_btn {
+.slide_btn {
   position: absolute;
   cursor: pointer;
   display: block;
@@ -200,11 +189,11 @@ table {
   color: #fff;
 }
 
-.container .slide_btn.slide_right {
+.slide_btn.slide_right {
   display: block;
   right: 0px;
 }
-.container .slide_btn.slide_left {
+.slide_btn.slide_left {
   display: block;
   left: 90px;
 }
@@ -357,6 +346,7 @@ tr {
 }
 
 .slide.clearfix {
+  display: flex;
   &.C0 {
     transform: translateX(0%);
     transition: all 0.3s;
