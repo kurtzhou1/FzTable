@@ -12,7 +12,7 @@ class Fztable extends React.Component {
         // M版時每次點擊往前往後移動幾格儲存格
         slide: 1, // [number]
         // M版時一個畫面show幾格儲存格
-        show: 4 // [number]
+        show: 1 // [number]
       },
       // 設定花多久時間移動完成
       speed: 0.3, // [number]
@@ -27,7 +27,7 @@ class Fztable extends React.Component {
         <div className="colume">
           <h2 className="title">低價月曆</h2>
         </div>
-        <Table />
+        <Table {...props} />
       </React.Fragment>
     );
   }

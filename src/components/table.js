@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import JsonData from "../ticketInfo.json";
+// import styled from "styled-components";
 
 class Table extends Component {
   state = {
@@ -9,8 +10,18 @@ class Table extends Component {
     bannerNameL: "L0",
     column: "C0",
     click: [false, false, false, false, false, false, false],
-    test: ""
+    test: "",
+    showNow: ["sN1", "sN2", "sN3", "sN4", "sN5", "sN6", "sN7", ""],
+    slideNow: ["sL1", "sL2", "SL3", "SL4", "SL5", "SL6", "SL7"]
   };
+  componentDidMount() {
+    const l = this.props.count.show - 1;
+    const M = this.props.count.slide - 1;
+    this.setState({
+      showNow: this.state.showNow[l],
+      slideNow: this.state.slideNow[M]
+    });
+  }
   clickR = () => {
     const { column } = this.state;
     if (column === "C0") {
@@ -25,6 +36,7 @@ class Table extends Component {
         column: "C2"
       });
     }
+    this.whenTransition();
   };
   clickL = () => {
     const { column } = this.state;
@@ -39,6 +51,7 @@ class Table extends Component {
         column: "C1"
       });
     }
+    this.whenTransition();
   };
 
   clickRow = j => {
@@ -52,12 +65,24 @@ class Table extends Component {
       test: { [i]: true }
     });
   };
+  whenTransition = () => {
+    console.log(this.props.speed * 10);
+    let timesRun = 0;
+    let interval = setInterval(() => {
+      timesRun += 1;
+      this.whenClickCallback();
+      if (timesRun === this.props.speed * 10) {
+        clearInterval(interval);
+      }
+    }, 1);
+  };
+
+  whenClickCallback = () => {
+    console.log("whenClickCallback");
+  };
 
   render() {
-    const { bannerNameL, bannerNameR, column, cheapest } = this.state;
-    // const data = JsonData[0].detail.map(ele => {
-    //   console.log(ele.price);
-    // });
+    const { bannerNameL, bannerNameR, column, showNow, slideNow } = this.state;
 
     return (
       <React.Fragment>
@@ -87,12 +112,15 @@ class Table extends Component {
                     <span>去程</span>
                   </div>
                 </td>
-                <td className={`slide clearfix date2 ${column}`}>
+                <td
+                  className={`slide clearfix date2 ${column} ${slideNow}`}
+                  style={{ transition: this.props.speed + "s" }}
+                >
                   {JsonData[0].detail.map((ele, i) => {
                     {
                     }
                     return (
-                      <div className={`col col${i + 1}`}>
+                      <div className={`col col${i + 1} ${showNow}`}>
                         <span>{ele.backDate}</span>
                         <div
                           className={`${
@@ -114,11 +142,14 @@ class Table extends Component {
                         <span>{ele.goDate}</span>
                       </div>
                     </td>
-                    <td className={`slide clearfix ${column}`}>
+                    <td
+                      className={`slide clearfix ${column} ${slideNow}`}
+                      style={{ transition: this.props.speed + "s" }}
+                    >
                       {JsonData[k].detail.map((ele, i) => {
                         return (
                           <div
-                            className={`col col${i + 1} ${
+                            className={`col col${i + 1} ${showNow} ${
                               this.state.click[k] ? "open1" : null
                             } ${this.state.test[i] ? "open2" : null}`}
                             onClick={() => {
