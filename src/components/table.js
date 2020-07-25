@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ReactDOM from "react-dom";
 import "./index.scss";
 import JsonData from "../ticketInfo.json";
 // import styled from "styled-components";
@@ -66,7 +65,6 @@ class Table extends Component {
     });
   };
   whenTransition = () => {
-    console.log(this.props.speed * 10);
     let timesRun = 0;
     let interval = setInterval(() => {
       timesRun += 1;
@@ -83,23 +81,18 @@ class Table extends Component {
 
   render() {
     const { bannerNameL, bannerNameR, column, showNow, slideNow } = this.state;
-
     return (
-      <React.Fragment>
+      <>
         <div className="container">
           <div
             className={`slide_btn slide_left ${bannerNameL}`}
-            onClick={() => {
-              this.clickL();
-            }}
+            onClick={this.clickL}
           >
             <i className="icon ic-ln"></i>
           </div>
           <div
             className={`slide_btn slide_right ${bannerNameR}`}
-            onClick={() => {
-              this.clickR();
-            }}
+            onClick={this.clickR}
           >
             <i className="icon ic-ln"></i>
           </div>
@@ -117,10 +110,8 @@ class Table extends Component {
                   style={{ transition: this.props.speed + "s" }}
                 >
                   {JsonData[0].detail.map((ele, i) => {
-                    {
-                    }
                     return (
-                      <div className={`col col${i + 1} ${showNow}`}>
+                      <div key={ele.backDate+ele.price} className={`col col${i + 1} ${showNow}`}>
                         <span>{ele.backDate}</span>
                         <div
                           className={`${
@@ -136,7 +127,7 @@ class Table extends Component {
               </tr>
               {JsonData.map((ele, k) => {
                 return (
-                  <tr>
+                  <tr key={ele.goDate+k}>
                     <td>
                       <div className="date">
                         <span>{ele.goDate}</span>
@@ -148,7 +139,7 @@ class Table extends Component {
                     >
                       {JsonData[k].detail.map((ele, i) => {
                         return (
-                          <div
+                          <div key={ele.backDate+ele.price+i}
                             className={`col col${i + 1} ${showNow} ${
                               this.state.click[k] ? "open1" : null
                             } ${this.state.test[i] ? "open2" : null}`}
@@ -174,7 +165,7 @@ class Table extends Component {
             </tbody>
           </table>
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
